@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>Tree Height</title>
+</head>
+
+<body>
+    <h1>Calculate Tree Height Below:</h1>
+    <div>Distance from Tree:</div>
+    <input type="text" id="distance" />
+    <div>Angle to top:</div>
+    <input type="text" id="angle" />
+    <div>Eye height:</div>
+    <input type="text" id="eye" />
+
+    <br><br>
+    <button onclick="compare()">Calculate</button>
+
+    <br>
+    <div>Tree Height:</div>
+    <div id="demo"></div>
+
+    <script>
+        function compare() {
+            var distance = parseInt(document.getElementById('distance').value);
+            var angle = parseInt(document.getElementById('angle').value);
+            var eye = parseInt(document.getElementById('eye').value);
+
+            document.getElementById("demo").innerHTML = Math.tan(angle*Math.PI/180)*distance + eye;
+        };
+    </script>
+
+</body>
+
+</html>
